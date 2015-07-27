@@ -16,3 +16,6 @@ RUN /bin/bash -l -c "rvm install 2.1.6"
 RUN /bin/bash -l -c "rvm rubygems current"
 RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
 RUN /bin/bash -l -c "gem install rails --no-ri --no-rdoc"
+
+expose 3000
+CMD ["/bin/bash -l -c "bundle exec rails s"]
