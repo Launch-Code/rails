@@ -5,7 +5,7 @@ RUN echo 'mysql-server-5.1 mysql-server/root_password_again password root' | deb
 
 RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y curl nodejs libmysqlclient-dev git
 
- install RVM
+#install RVM
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 RUN \curl -O https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer
 RUN \curl -O https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscripts/rvm-installer.asc
