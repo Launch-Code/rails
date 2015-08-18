@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 RUN echo 'mysql-server-5.1 mysql-server/root_password password root' | debconf-set-selections
 RUN echo 'mysql-server-5.1 mysql-server/root_password_again password root' | debconf-set-selections
 
-RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y curl nodejs libmysqlclient-dev git
+RUN apt-get clean && apt-get update && apt-get upgrade -y && apt-get install -y curl nodejs libmysqlclient-dev git libfreetype6 libfontconfig
 
 #install RVM
 RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
