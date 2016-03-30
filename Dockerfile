@@ -12,10 +12,10 @@ RUN \curl -O https://raw.githubusercontent.com/wayneeseguin/rvm/master/binscript
 RUN gpg --verify rvm-installer.asc
 RUN bash rvm-installer stable
 RUN /bin/bash -l -c "rvm requirements"
-RUN /bin/bash -l -c "rvm install 2.1.6"
+RUN /bin/bash -l -c "rvm install 2.3.0"
 RUN /bin/bash -l -c "rvm rubygems current"
 RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
-RUN /bin/bash -l -c "gem install rails --no-ri --no-rdoc"
+RUN /bin/bash -l -c "gem install rails -v 4.1.13 --no-ri --no-rdoc"
 
 expose 3000
 CMD ["/bin/bash -l -c "bundle exec rails s"]
